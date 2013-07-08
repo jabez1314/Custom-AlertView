@@ -18,6 +18,10 @@
 		8D9262BC178B34C7000BE58D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9262BB178B34C7000BE58D /* Default-568h@2x.png */; };
 		8D9262BF178B34C7000BE58D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9262BD178B34C7000BE58D /* MainStoryboard.storyboard */; };
 		8D9262C2178B34C7000BE58D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9262C1178B34C7000BE58D /* ViewController.m */; };
+		8D9262CA178B3840000BE58D /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9262C9178B3840000BE58D /* AlertView.m */; };
+		8D9262CF178B4AC5000BE58D /* UIView+DPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9262CC178B4276000BE58D /* UIView+DPUtils.m */; };
+		8D9262D0178B4ACB000BE58D /* UILabel+dynamicSizeMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9262CE178B4289000BE58D /* UILabel+dynamicSizeMe.m */; };
+		8D9262D2178B4B73000BE58D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9262D1178B4B73000BE58D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,13 @@
 		8D9262BE178B34C7000BE58D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8D9262C0178B34C7000BE58D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D9262C1178B34C7000BE58D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8D9262C8178B3840000BE58D /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		8D9262C9178B3840000BE58D /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
+		8D9262CB178B4276000BE58D /* UIView+DPUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DPUtils.h"; sourceTree = "<group>"; };
+		8D9262CC178B4276000BE58D /* UIView+DPUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DPUtils.m"; sourceTree = "<group>"; };
+		8D9262CD178B4289000BE58D /* UILabel+dynamicSizeMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSizeMe.h"; sourceTree = "<group>"; };
+		8D9262CE178B4289000BE58D /* UILabel+dynamicSizeMe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSizeMe.m"; sourceTree = "<group>"; };
+		8D9262D1178B4B73000BE58D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9262D2178B4B73000BE58D /* QuartzCore.framework in Frameworks */,
 				8D9262A6178B34C7000BE58D /* UIKit.framework in Frameworks */,
 				8D9262A8178B34C7000BE58D /* Foundation.framework in Frameworks */,
 				8D9262AA178B34C7000BE58D /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +68,7 @@
 		8D926299178B34C7000BE58D = {
 			isa = PBXGroup;
 			children = (
+				8D9262D1178B4B73000BE58D /* QuartzCore.framework */,
 				8D9262AB178B34C7000BE58D /* alerta */,
 				8D9262A4178B34C7000BE58D /* Frameworks */,
 				8D9262A3178B34C7000BE58D /* Products */,
@@ -83,12 +96,18 @@
 		8D9262AB178B34C7000BE58D /* alerta */ = {
 			isa = PBXGroup;
 			children = (
+				8D9262CB178B4276000BE58D /* UIView+DPUtils.h */,
+				8D9262CC178B4276000BE58D /* UIView+DPUtils.m */,
+				8D9262CD178B4289000BE58D /* UILabel+dynamicSizeMe.h */,
+				8D9262CE178B4289000BE58D /* UILabel+dynamicSizeMe.m */,
 				8D9262B4178B34C7000BE58D /* AppDelegate.h */,
 				8D9262B5178B34C7000BE58D /* AppDelegate.m */,
 				8D9262BD178B34C7000BE58D /* MainStoryboard.storyboard */,
 				8D9262C0178B34C7000BE58D /* ViewController.h */,
 				8D9262C1178B34C7000BE58D /* ViewController.m */,
 				8D9262AC178B34C7000BE58D /* Supporting Files */,
+				8D9262C8178B3840000BE58D /* AlertView.h */,
+				8D9262C9178B3840000BE58D /* AlertView.m */,
 			);
 			path = alerta;
 			sourceTree = "<group>";
@@ -173,9 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9262D0178B4ACB000BE58D /* UILabel+dynamicSizeMe.m in Sources */,
+				8D9262CF178B4AC5000BE58D /* UIView+DPUtils.m in Sources */,
 				8D9262B2178B34C7000BE58D /* main.m in Sources */,
 				8D9262B6178B34C7000BE58D /* AppDelegate.m in Sources */,
 				8D9262C2178B34C7000BE58D /* ViewController.m in Sources */,
+				8D9262CA178B3840000BE58D /* AlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
